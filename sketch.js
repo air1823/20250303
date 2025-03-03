@@ -29,7 +29,7 @@ function setup() {
   weekSelect.position(colorButton.x + colorButton.width + 20, 30); // 將下拉式選單放在變換顏色按鈕的右邊
   weekSelect.option('淡江大學');
   weekSelect.option('淡江教科');
-  weekSelect.option('本周筆記');
+  weekSelect.option('第三周筆記');
   weekSelect.changed(goToWeek); // 設置選單變更事件
 
   iframe = createElement('iframe');
@@ -78,7 +78,7 @@ function goToWeek() {
   } else if (selectedWeek === '淡江教科') {
     iframe.attribute('src', 'http://www.et.tku.edu.tw/');
     iframe.show(); // 顯示 iframe
-  } else if (selectedWeek === '本周筆記') {
+  } else if (selectedWeek === '第三周筆記') {
     window.open('https://hackmd.io/@aaaiiirrr/Sk8-XtGsye', '_blank');
     iframe.hide(); // 隱藏 iframe
   }
